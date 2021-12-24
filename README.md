@@ -236,4 +236,4 @@
         - 25. Bakend - Eventos del calendario - CRUD
         
     CURSO UDEMY-React: De cero a experto (Hooks y MERN)
-    Entrega de proyecto Balcax
+    Instalación de proyecto Balcax

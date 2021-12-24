@@ -13,7 +13,7 @@ const getEventos = async( req, res = response ) => {
 }
 
 const crearEvento = async ( req, res = response ) => {
-
+    //verificar que exista evento
     const evento = new Evento( req.body );
 
     try {
