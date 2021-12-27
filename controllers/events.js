@@ -1,20 +1,27 @@
 const { response } = require('express');
 const Evento = require('../models/Evento');
 
-const getEventos = async( req, res = response ) => {
+const getEventos = ( req, res = response ) => {
 
-    const eventos = await Evento.find()
-                                .populate('user','name');
-
+    /*const eventos = await Evento.find()
+                                .populate('user','name');*/
+    
     res.json({
         ok: true,
-        eventos
+        msg:'getEventos'
     });
 }
 
-const crearEvento = async ( req, res = response ) => {
+const crearEvento =  ( req, res = response ) => {
+
+    console.log(req.body);
+
+    res.json({
+        ok: true,
+        msg:'postEventos'
+    });
     //verificar que exista evento
-    const evento = new Evento( req.body );
+    /*const evento = new Evento( req.body );
 
     try {
 
@@ -34,12 +41,15 @@ const crearEvento = async ( req, res = response ) => {
             ok: false,
             msg: 'Hable con el administrador'
         });
-    }
+    }*/
 }
 
-const actualizarEvento = async( req, res = response ) => {
-    
-    const eventoId = req.params.id;
+const actualizarEvento = ( req, res = response ) => {
+    res.json({
+        ok: true,
+        msg:'putEventos'
+    });
+    /*const eventoId = req.params.id;
     const uid = req.uid;
 
     try {
@@ -79,13 +89,16 @@ const actualizarEvento = async( req, res = response ) => {
             ok: false,
             msg: 'Hable con el administrador'
         });
-    }
+    }*/
 
 }
 
-const eliminarEvento = async( req, res = response ) => {
-
-    const eventoId = req.params.id;
+const eliminarEvento = ( req, res = response ) => {
+    res.json({
+        ok: true,
+        msg:'deleteEventos'
+    });
+    /*const eventoId = req.params.id;
     const uid = req.uid;
 
     try {
@@ -118,7 +131,7 @@ const eliminarEvento = async( req, res = response ) => {
             ok: false,
             msg: 'Hable con el administrador'
         });
-    }
+    }*/
 
 }
 
